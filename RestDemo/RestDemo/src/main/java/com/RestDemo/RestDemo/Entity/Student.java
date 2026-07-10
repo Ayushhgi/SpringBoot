@@ -6,6 +6,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDateTime;
+
 @Entity
 public class Student {
 
@@ -26,8 +28,26 @@ public class Student {
 
     private String email;
     private int age;
-    private int rollno;
+    private int rollNo;
     private String subject;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
     public Long getId() {
         return id;
@@ -61,12 +81,12 @@ public class Student {
         this.age = age;
     }
 
-    public int getRollno() {
-        return rollno;
+    public int getRollNo() {
+        return rollNo;
     }
 
-    public void setRollno(int rollno) {
-        this.rollno = rollno;
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
     }
 
     public String getSubject() {
